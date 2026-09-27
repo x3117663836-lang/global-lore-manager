@@ -1,0 +1,115 @@
+.glm-panel, .glm-dialog {
+    --glm-line: #94a5d22e;
+    --glm-muted: #b7c2db;
+    box-sizing: border-box; color: #f0f3ff; font: 14px/1.45 system-ui, sans-serif;
+    border: 1px solid #859ad54d; border-radius: 20px;
+    background: linear-gradient(145deg, #242c41, #171e30 75%);
+    box-shadow: 0 20px 65px #0008; color-scheme: dark; text-align: left;
+}
+.glm-panel { position: fixed; z-index: 2147482999; display: flex; flex-direction: column; padding: 16px; overflow: hidden; gap: 10px; }
+.glm-panel *, .glm-dialog * { box-sizing: border-box; }
+.glm-panel [hidden], .glm-panel[hidden], .glm-orb[hidden] { display: none !important; }
+.glm-orb {
+    position: fixed; z-index: 2147483000; border: 2px solid #b8caffb0; border-radius: 24%;
+    padding: 0; background: #e9edf9; box-shadow: 0 5px 20px #16275088;
+    cursor: pointer; touch-action: none; user-select: none; overflow: hidden; -webkit-tap-highlight-color: transparent;
+}
+.glm-orb img { display: block; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+.glm-orb:hover { filter: brightness(1.07); }
+.glm-orb[aria-expanded=true] { border-color: #93aaff; box-shadow: 0 0 0 3px #788fff44, 0 5px 20px #16275088; }
+.glm-orb:focus-visible { outline: 3px solid #d6e2ff; outline-offset: 3px; }
+.glm-settings { padding: 8px; }
+.glm-settings summary { cursor: pointer; padding: 5px 0; font-weight: 600; }
+.glm-settings label { display: block; margin-top: 10px; }
+.glm-settings input[type=range] { width: min(260px,70%); vertical-align: middle; margin-right: 8px; }
+.glm-settings button { margin: 6px 4px 0 0; }
+.glm-header, .glm-actions, .glm-search-row { display: flex; align-items: center; gap: 7px; }
+.glm-header { justify-content: space-between; flex: 0 0 auto; }
+.glm-header strong { display: block; font-size: 19px; line-height: 1.5; }
+.glm-eyebrow { color: #98aeef; font-size: 10px; letter-spacing: .15em; display: block; }
+.glm-close { font-size: 12px !important; }
+.glm-tabs { display: flex; gap: 5px; padding: 4px; border: 1px solid var(--glm-line); border-radius: 12px; background: #060c192e; flex-shrink: 0; }
+.glm-tabs .glm-button { flex: 1; border-color: transparent; background: transparent; min-height: 36px; }
+.glm-tabs [aria-selected=true] { background: #677fd945; border-color: #849dff6b; color: #fff; }
+.glm-page { display: flex; flex-direction: column; flex: 1 1 auto; min-height: 0; gap: 8px; overflow: hidden; }
+.glm-page > :not(.glm-list):not(.glm-groups) { flex-shrink: 0; }
+.glm-panel input[type=search], .glm-dialog input:not([type=checkbox]) {
+    width: 100%; min-width: 0; padding: 9px 11px; min-height: 40px; border: 1px solid var(--glm-line);
+    border-radius: 10px; background: #0c142480; color: #f0f3ff; font: inherit; margin: 0;
+}
+.glm-panel input::placeholder, .glm-dialog input::placeholder { color: #a2aec8; opacity: 1; }
+.glm-search-row input { flex: 1; }
+.glm-actions { flex-wrap: wrap; }
+.glm-actions select { min-width: 0; flex: 1; color: #e6edff; padding: 7px; background: #1b2438; border: 1px solid var(--glm-line); border-radius: 8px; min-height: 38px; font: inherit; }
+.glm-button { font: inherit; color: inherit; padding: 8px 11px; border-radius: 9px; border: 1px solid #94a5d238; background: #9baddc12; cursor: pointer; line-height: 1.35; min-height: 36px; box-shadow: none; -webkit-tap-highlight-color: transparent; }
+.glm-button:hover:not(:disabled) { background: #8ca0e133; border-color: #93aaff80; }
+.glm-button:disabled { opacity: .45; cursor: default; }
+.glm-primary { background: linear-gradient(135deg,#606ab4,#3d69a4); border-color: #9db2ff66; color: #fff; }
+.glm-muted { color: var(--glm-muted,#acb8d0); font-size: 12px; line-height: 1.5; margin: 0; }
+.glm-list, .glm-groups, .glm-member-list { flex: 1 1 auto; min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #7d92c766 transparent; border-block: 1px solid var(--glm-line); }
+.glm-book { display: flex; align-items: center; gap: 6px; padding: 6px 2px; border-bottom: 1px solid #94a5d217; }
+.glm-book:last-child { border-bottom: 0; }
+.glm-book:has(input:checked) { background: #6b8ad711; }
+.glm-book:hover { background: #a6b5e112; }
+.glm-book label, .glm-member { display: flex; align-items: center; gap: 10px; min-width: 0; flex: 1; cursor: pointer; padding: 6px 4px; text-align: left; min-height: 38px; }
+.glm-book label span, .glm-member span { white-space: normal; overflow-wrap: anywhere; }
+.glm-book input[type=checkbox], .glm-member input[type=checkbox] { flex: 0 0 auto; width: 18px; height: 18px; margin: 0; accent-color: #89a5ff; }
+.glm-edit { font-size: 12px; flex: 0 0 auto; }
+.glm-star { flex: 0 0 auto; font-size: 20px; padding: 3px 7px; min-width: 32px; color: #bfc8de; }
+.glm-star[aria-pressed=true] { color: #ffe093; background: #ffca6520; border-color: #ffca6555; }
+.glm-folder-tools { display: flex; align-items: center; gap: 6px; }
+.glm-folder-tools select { flex: 1; min-width: 0; color: #e6edff; padding: 8px; background: #1b2438; border: 1px solid var(--glm-line); border-radius: 8px; min-height: 38px; font: inherit; }
+.glm-folder-tools .glm-button { font-size: 12px; padding-inline: 8px; flex-shrink: 0; }
+.glm-book .glm-warning { font-size: 11px; flex-shrink: 0; max-width: 45px; }
+.glm-tabs .glm-button { min-width: 0; padding-inline: 5px; white-space: nowrap; }
+.glm-group { padding: 14px 3px; border-bottom: 1px solid var(--glm-line); overflow-wrap: anywhere; }
+.glm-group strong { font-size: 15px; }
+.glm-group .glm-actions { margin-top: 10px; }
+.glm-warning { color: #edc47a; font-size: 12px; margin: 6px 0 0; }
+.glm-footer { flex: 0 0 auto; display: flex; align-items: center; gap: 10px; border-top: 1px solid var(--glm-line); padding-top: 10px; }
+.glm-footer .glm-button { flex: 0 0 auto; font-size: 12px; }
+.glm-status { flex: 1; min-width: 0; font-size: 12px; line-height: 1.55; margin: 0; overflow-wrap: anywhere; max-height: 72px; overflow: auto; color: #c4d0eb; }
+.glm-error { color: #ffafaf; }
+.glm-empty { padding: 25px 8px; text-align: center; color: var(--glm-muted); }
+.glm-empty p { margin: 0 0 12px; }
+.glm-dialog { position: fixed; margin: 0; max-width: none; max-height: none; padding: 16px; overflow: hidden; }
+.glm-dialog[open] { display: flex; flex-direction: column; gap: 10px; }
+.glm-dialog::backdrop { background: #080c1c99; }
+.glm-dialog h3 { margin: 0; font-size: 18px; }
+.glm-dialog-top { display: flex; flex-direction: column; gap: 8px; flex-shrink: 0; }
+.glm-dialog-bottom { flex-shrink: 0; }
+.glm-dialog-bottom p { margin: 0 0 6px; }
+.glm-member { padding: 8px 2px; }
+.glm-panel :focus-visible, .glm-dialog :focus-visible { outline: 2px solid #a8bcff; outline-offset: 2px; }
+.glm-panel:focus { outline: none; }
+.glm-panel.glm-compact, .glm-dialog.glm-compact { padding: 8px; gap: 5px; }
+.glm-compact .glm-eyebrow { display: none; }
+.glm-compact .glm-header strong { font-size: 16px; }
+.glm-compact .glm-page, .glm-compact .glm-dialog-top { gap: 4px; }
+.glm-compact .glm-button, .glm-compact .glm-tabs .glm-button, .glm-compact .glm-actions select { min-height: 30px; padding: 4px 8px; }
+.glm-compact .glm-folder-tools select { min-height: 30px; padding: 4px 6px; }
+.glm-compact input[type=search], .glm-dialog.glm-compact input:not([type=checkbox]) { min-height: 32px; padding: 5px 8px; }
+.glm-compact .glm-footer { padding-top: 5px; }
+.glm-compact .glm-status { max-height: 38px; }
+.glm-dialog.glm-compact .glm-dialog-top { max-height: 68%; overflow: auto; flex-shrink: 1; }
+@media(max-width:600px) {
+    .glm-panel, .glm-dialog { padding: 12px; border-radius: 16px; }
+    .glm-panel { gap: 8px; }
+    .glm-header strong { font-size: 17px; }
+    .glm-button { min-height: 40px; padding: 8px 9px; }
+    .glm-panel input[type=search], .glm-dialog input:not([type=checkbox]) { font-size: 16px; }
+    .glm-actions select { font-size: 13px; }
+    .glm-book { gap: 4px; }
+    .glm-book .glm-button { padding-inline: 6px; }
+    .glm-folder-tools .glm-button { padding-inline: 6px; }
+}
+@media(max-height:480px) {
+    .glm-panel, .glm-dialog { padding: 8px; gap: 5px; }
+    .glm-eyebrow { display: none; }
+    .glm-header strong { font-size: 16px; }
+    .glm-page, .glm-dialog-top { gap: 4px; }
+    .glm-button, .glm-tabs .glm-button, .glm-actions select { min-height: 30px; padding: 4px 8px; }
+    .glm-panel input[type=search], .glm-dialog input:not([type=checkbox]) { min-height: 32px; padding: 5px 8px; }
+    .glm-footer { padding-top: 5px; }
+    .glm-status { max-height: 38px; }
+}

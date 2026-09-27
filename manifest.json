@@ -1,0 +1,13 @@
+{
+  "display_name": "全局世界书管理",
+  "loading_order": 140,
+  "requires": [],
+  "optional": [],
+  "js": "index.js",
+  "css": "style.css",
+  "author": "x3117663836-lang",
+  "homePage": "https://github.com/x3117663836-lang/global-lore-manager",
+  "version": "1.2.0",
+  "auto_update": false,
+  "hooks": { "disable": "onDisable" }
+}
