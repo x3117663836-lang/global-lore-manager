@@ -53,6 +53,6 @@ https://github.com/x3117663836-lang/global-lore-manager
 
 代码公开供审查，未采用 MIT 等开放源代码许可证；代码部分保留权利，不提供担保。第三方素材遵循自身适用许可，不受本项目代码版权声明替代。
 
-悬浮图标由发布者提供，来源标注为 [yanzwzz/dsh-whale-girl-pet](https://github.com/yanzwzz/dsh-whale-girl-pet)。非本插件原创，来源仓库标注 MIT；详见 [素材说明](assets/README.md) 和 [上游许可原文](LICENSE-dsh-whale-girl-pet.txt)。
+悬浮图标由发布者提供，来源标注为 [yanzwzz/dsh-whale-girl-pet](https://github.com/yanzwzz/dsh-whale-girl-pet)。非本插件原创，来源仓库标注 MIT；详见 [素材说明](assets/README.md) 和 [上游许可原文](assets/LICENSE-dsh-whale-girl-pet.txt)。
 
 本插件非 DeepSeek 官方作品，不连接 DeepSeek 接口，也没有引入该桌宠的服务端代码、天气或计费功能。
